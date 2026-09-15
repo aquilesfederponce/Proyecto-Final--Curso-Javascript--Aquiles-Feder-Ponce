@@ -1,0 +1,11 @@
+// Lista de variables - Colores y Fuentes
+
+@use "sass:map";
+
+$colores: (
+    "negro" : #030303,
+    "blanco" : #F2EED8,
+    "gris" : #A69485,
+    "cafe_oscuro" : #A1743D,
+    "cafe_claro" : #DBB27F,
+);

@@ -1,0 +1,23 @@
+// Mixins para estilado dinamico
+
+//Mixin Flex
+@mixin flexible($direction, $corte, $just, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+
+//Mixin fuentes
+@mixin titulos($weight, $size) {
+    font-family: "Syne", sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin parrafos($weight, $size) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+}
