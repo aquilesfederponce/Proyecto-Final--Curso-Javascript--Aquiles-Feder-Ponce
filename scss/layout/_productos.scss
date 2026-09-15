@@ -1,0 +1,13 @@
+@use "../abstracts/mixins" as*;
+@use "../abstracts/variables" as*;
+@use "sass:map";
+
+.productos{
+    min-height: 100vh;
+    background-color: map.get($colores, "negro");
+    text-align: center;
+    &__h2{
+        color: map.get($colores, "blanco");
+        @include titulos(400, 50px);
+    }
+}

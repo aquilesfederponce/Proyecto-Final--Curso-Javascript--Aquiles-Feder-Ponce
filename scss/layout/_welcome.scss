@@ -1,0 +1,53 @@
+@use "../abstracts/mixins" as*;
+@use "../abstracts/variables" as*;
+@use "sass:map";
+
+.welcome{
+    background-image: url(../assets/img/fondo-welocome1.jpg);
+    background-size: cover;
+    min-height: 500px;
+}
+
+.welcome__container{
+    backdrop-filter: blur(4.4px);
+    @include flexible(row, nowrap, center, center);
+    min-height: 550px;
+}
+
+.welcome__text{
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    border: 0.5px, solid, map.get($colores, "cafe_claro");
+    background-color: rgba(3, 3, 3, 0.8);
+    @include flexible(column, nowrap, center, center);
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    h1{
+        @include titulos(400, 38px);
+        color: map.get($colores, "blanco");
+
+    }
+    h2{
+        @include titulos(400, 25px);
+        color: map.get($colores, "blanco");
+        
+    }
+    p{
+        @include parrafos(400, 18px);
+        color: map.get($colores, "cafe_claro");
+        
+    }
+}
+
+.welcome__img{
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 20px;
+     border: 0.5px, solid, map.get($colores, "cafe_oscuro");
+    background-image: url(../assets/img/hero__img.jpg);
+    background-size: cover;
+    @include flexible(row, wrap, center, center);
+}

@@ -89,6 +89,83 @@ header {
   transition: 0.5s ease;
 }
 
+.welcome {
+  background-image: url(../assets/img/fondo-welocome1.jpg);
+  background-size: cover;
+  min-height: 500px;
+}
+
+.welcome__container {
+  backdrop-filter: blur(4.4px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
+}
+
+.welcome__text {
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  border: 0.5px, solid, #DBB27F;
+  background-color: rgba(3, 3, 3, 0.8);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  text-align: center;
+}
+.welcome__text h1 {
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 38px;
+  color: #F2EED8;
+}
+.welcome__text h2 {
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #F2EED8;
+}
+.welcome__text p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #DBB27F;
+}
+
+.welcome__img {
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0.5px, solid, #A1743D;
+  background-image: url(../assets/img/hero__img.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.productos {
+  min-height: 100vh;
+  background-color: #030303;
+  text-align: center;
+}
+.productos__h2 {
+  color: #F2EED8;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
 .footer {
   min-height: 50vh;
   background-color: #010D00;
