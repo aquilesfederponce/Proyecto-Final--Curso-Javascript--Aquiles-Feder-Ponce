@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as*;
+@use "../abstracts/variables" as*;
+@use "sass:map";
+
+.footer{
+    min-height: 50vh;
+    background-color: #010D00;
+    @include flexible(row, nowrap, space-evenly, center);
+    &__container{
+        @include flexible(row, nowrap, space-evenly, center);
+        gap: 200px;
+    }
+    &__img{
+        width: 200px;
+    }
+    &__ul{
+        list-style-type: none;
+        @include flexible(column, nowrap, space-evenly, center);
+        gap: 10px;
+    }
+    &__a{
+        text-decoration: none;
+        color: map.get($colores, "blanco");
+        @include titulos(400, 19px)
+    }
+}
+
+.footer__a:hover{
+    color: map.get($colores , "cafe_oscuro");
+    transition: 0.5s ease;
+}

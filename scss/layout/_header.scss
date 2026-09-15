@@ -1,0 +1,70 @@
+@use "../abstracts/mixins" as*;
+@use "../abstracts/variables" as*;
+@use "sass:map";
+
+header{
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+}
+
+.header{
+    background-color: map.get($colores , "negro");
+    height: 100px;
+    color: map.get($colores, "blanco");
+    &__container{
+        @include flexible(row, nowrap, space-between, center);
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    &__img{
+        width: 110px;
+        height: auto;
+    }
+    &__nav{
+        @include flexible(row, nowrap, space-evenly, center);
+    }
+    &__ul{
+        list-style-type: none;
+        @include flexible(row, nowrap, space-evenly, center);
+        gap: 30px;
+    }
+    &__li{
+        @include flexible(row, nowrap, space-evenly, center);
+    }
+    &__a{
+        text-decoration: none;
+        color: map.get($colores, "blanco");
+        @include titulos(400, 18px);
+    }
+    &__search{
+        border-radius: 10px;
+        border: 1px solid map.get($colores, "blanco");
+        background-color: map.get($colores, "gris");
+        padding: 10px;
+        width: 250px;
+        height: 25px;
+        color: map.get($colores, "negro");
+    }
+     &__search::placeholder{
+        color: rgba(0, 0, 0, 0.4);
+    }
+    &__contador{
+        background-color: rgb(96, 105, 11);
+        padding: 10px;
+        width: 40px;
+        height: 25px;
+        color: map.get($colores, "cafe_claro");
+        @include flexible(row, nowrap, center, center);
+        gap: 5px;
+        text-align: center;
+        border-radius: 3px;
+        border-radius: none;
+        @include parrafos(400, 20px);
+    }
+}
+
+.header__a:hover{
+    color: map.get($colores , "cafe_oscuro");
+    transition: 0.5s ease;
+}

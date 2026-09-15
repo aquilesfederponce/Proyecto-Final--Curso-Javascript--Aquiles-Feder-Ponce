@@ -1,0 +1,11 @@
+@use "./abstracts/mixins" ;
+@use "./abstracts/variables" ;
+@use "./layout/header";
+@use "./layout/welcome";
+@use "./layout/productos";
+@use "./layout/footer" ;
+
+*{
+    margin: 0;
+    padding: 0;
+}
