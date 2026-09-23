@@ -2,12 +2,131 @@
 @use "../abstracts/variables" as*;
 @use "sass:map";
 
-.productos{
-    min-height: 100vh;
+.productos {
+    min-height: 200vh;
     background-color: map.get($colores, "negro");
     text-align: center;
-    &__h2{
-        color: map.get($colores, "blanco");
-        @include titulos(400, 50px);
+
+    &__hero {
+        background-image: url("../assets/img/los-mejores-granos-de-cafe.jpg");
+        background-size: cover;
     }
+
+    &__hero--text {
+        @include flexible(row, nowrap, center, center);
+        text-align: center;
+        backdrop-filter: blur(4px);
+        min-height: 300px;
+    }
+
+    &__h2 {
+        color: rgb(230, 186, 120);
+        @include titulos(balder, 50px);
+    }
+
+    &__container {
+        @include flexible(row, wrap, space-around, center);
+        min-height: 150vh;
+    }
+
+    &__card {
+        width: 300px;
+        height: 400px;
+        border-radius: 30px;
+        background-color: rgba(166, 148, 133, 0.1);
+        @include flexible(column, nowrap, center, center);
+        gap: 7px;
+        text-align: center;
+        border: 0.5px, solid, map.get($colores, "cafe_claro");
+        perspective: 1000px;
+    }
+
+    &__img {
+        width: 100px;
+    }
+
+    &__h3 {
+        @include titulos(400, 20px);
+        color: map.get($colores, "blanco");
+
+    }
+
+    &__p {
+        @include parrafos(400, 17px);
+        color: map.get($colores, "blanco");
+    }
+
+    &__boton--agregar {
+        width: 175px;
+        height: 25px;
+        background-color: rgb(96, 105, 11);
+        color: map.get($colores, "blanco");
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+    }
+
+    &__boton--info {
+        width: 175px;
+        height: 25px;
+        background-color: rgb(226, 196, 28);
+        color: map.get($colores, "negro");
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+    }
+
+    &__boton--info:hover {
+        background-color: rgb(122, 107, 18);
+        transition: 0.2s ease-in;
+    }
+
+    &__boton--agregar:hover {
+        background-color: rgb(25, 63, 3);
+        transition: 0.2s ease-in-out;
+    }
+    &__precio{
+        color: rgb(233, 213, 190);
+        font-weight: 600;
+    }
+}
+
+.productos__card--rotacion {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+.productos__card--front,
+.productos__card--back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.productos__card--back {
+    transform: rotateY(180deg);
+    @include parrafos(400, 15px);
+    color: map.get($colores, "blanco");
+    @include flexible(column, nowrap, space-evenly, center);
+    text-align: center;
+
+}
+
+.productos__card--rotacion.girar {
+    transform: rotateY(180deg);
+}
+
+.productos__card--front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+    @include flexible(column, nowrap, center, center);
+    gap: 9px;
+    text-align: center;
 }
