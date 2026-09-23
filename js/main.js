@@ -2,6 +2,13 @@ const productosContainer = document.getElementById("productosContainer");
 const contadorItemsCarrito = document.getElementById("contadorItemCarrito");
 const barraBusqueda = document.getElementById("barraBusqueda");
 
+const contadorGuardado = localStorage.getItem("items");
+if (contadorGuardado) {
+    contadorItemsCarrito.textContent = JSON.parse(contadorGuardado);
+}
+
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
 async function obtenerProductos() {
     try {
         const datos = await fetch("./data/data.json");
@@ -53,14 +60,42 @@ async function mostrarProductos() {
             })
 
             const botonAgregarCarrito = tarjetaHTML.querySelector(".productos__boton--agregar");
-            botonAgregarCarrito.addEventListener("click", async () => {
+            botonAgregarCarrito.addEventListener("click", () => {
+                const cafeEnCarrito = carrito.find((cafe) => {
+                    return cafe.id === producto.id;
+                })
 
+                if (producto.stock > 0) {
+                    if (!cafeEnCarrito) {
+                        const { id, nombre, imagen, precio, textoAlt, descripcion } = producto;
+
+                        const cafeNuevo = {
+                            id,
+                            nombre,
+                            imagen,
+                            precio,
+                            textoAlt,
+                            descripcion,
+                            cantidad: 1
+                        }
+                        carrito.push(cafeNuevo);
+                        contadorItemsCarrito.textContent = Number(contadorItemsCarrito.textContent) + 1;
+                        localStorage.setItem("carrito", JSON.stringify(carrito));
+                        localStorage.setItem("items", JSON.stringify(Number(contadorItemsCarrito.textContent)));
+                    } else {
+                        cafeEnCarrito.cantidad++;
+                        contadorItemsCarrito.textContent = Number(contadorItemsCarrito.textContent) + 1;
+                        localStorage.setItem("items", JSON.stringify(Number(contadorItemsCarrito.textContent)));
+                        localStorage.setItem("carrito", JSON.stringify(carrito));
+                    }
+                }
             })
         });
     }
-    catch {
-
+    catch (error) {
+        console.log(error);
     }
 }
 
 mostrarProductos();
+
