@@ -79,11 +79,13 @@
     &__boton--info:hover {
         background-color: rgb(122, 107, 18);
         transition: 0.2s ease-in;
+        cursor: pointer;
     }
 
     &__boton--agregar:hover {
         background-color: rgb(25, 63, 3);
         transition: 0.2s ease-in-out;
+        cursor: pointer;
     }
     &__precio{
         color: rgb(233, 213, 190);

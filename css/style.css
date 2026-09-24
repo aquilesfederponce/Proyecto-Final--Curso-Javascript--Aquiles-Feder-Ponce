@@ -83,6 +83,11 @@ header {
   font-weight: 400;
   font-size: 20px;
 }
+.header__contador:hover {
+  background-color: rgb(47, 51, 8);
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
 
 .header__a:hover {
   color: #A1743D;
@@ -238,10 +243,12 @@ header {
 .productos__boton--info:hover {
   background-color: rgb(122, 107, 18);
   transition: 0.2s ease-in;
+  cursor: pointer;
 }
 .productos__boton--agregar:hover {
   background-color: rgb(25, 63, 3);
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 .productos__precio {
   color: rgb(233, 213, 190);
@@ -336,6 +343,180 @@ header {
 .footer__a:hover {
   color: #A1743D;
   transition: 0.5s ease;
+}
+
+.carrito {
+  min-height: 200vh;
+  background-color: #030303;
+  text-align: center;
+}
+.carrito__hero {
+  background-image: url("../assets/img/Fondo titulo productos.jpg");
+  background-size: cover;
+}
+.carrito__hero--text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  min-height: 300px;
+}
+.carrito__h2 {
+  color: rgb(233, 227, 220);
+  font-family: "Syne", sans-serif;
+  font-weight: balder;
+  font-size: 50px;
+}
+.carrito__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 120vh;
+}
+.carrito__boton--eliminar {
+  width: 175px;
+  height: 25px;
+  background-color: rgb(121, 38, 23);
+  color: #F2EED8;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+}
+.carrito__boton--eliminar:hover {
+  background-color: rgb(78, 23, 13);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.carrito__modificar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.carrito__modificar--sumar {
+  width: 30px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(96, 105, 11);
+  color: #F2EED8;
+}
+.carrito__modificar--span {
+  color: #A1743D;
+}
+.carrito__modificar--restar {
+  width: 30px;
+  height: 25px;
+  background-color: rgb(121, 38, 23);
+  color: #F2EED8;
+  border-radius: 5px;
+  border: none;
+}
+.carrito__modificar--restar:hover {
+  background-color: rgb(78, 23, 13);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.carrito__modificar--sumar:hover {
+  background-color: rgb(25, 63, 3);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.pagar {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 10;
+  pointer-events: none;
+}
+.pagar__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 280px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(3, 3, 3, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+.pagar__container.mostrar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.pagar__subtotal {
+  color: #F2EED8;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+.pagar__vaciar {
+  border: none;
+  background-color: rgb(121, 38, 23);
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  color: #F2EED8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+.pagar__vaciar:hover {
+  background-color: rgb(78, 23, 13);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.pagar__completado {
+  border: none;
+  background-color: rgb(96, 105, 11);
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  color: #F2EED8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+.pagar__completado:hover {
+  background-color: rgb(47, 51, 8);
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+.pagar__botones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+.pagar__ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  list-style-type: none;
+  gap: 8px;
 }
 
 * {

@@ -8,7 +8,7 @@
     <!--  CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- Javascript-->
-    <script defer src=""></script>
+    <script defer src="../js/carrito.js"></script>
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@400..800&display=swap"
         rel="stylesheet">
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -29,18 +34,47 @@
             <nav class="header__nav">
                 <ul class="header__ul">
                     <li class="header__li"><a class="header__a" href="../index.html">Inicio</a></li>
-                    <li class="header__li"><a class="header__a" href="../index.html">Productos</a></li>
+                    <li class="header__li"><a class="header__a" href="../index.html#productos">Productos</a></li>
                     <li class="header__li"><a class="header__a" href="./pages/carrito.html">Carrito</a></li>
                     <form class="header__form">
                         <label for="barraBusqueda">🔍</label>
                         <input type="search" class="header__search" id="barraBusqueda"
                             placeholder="Ej: Cafe Colombia Tostado">
                     </form>
-                    <li class="header__li"><span class="header__contador"><span>🛒</span>0</span></li>
+                    <li class="header__li"><span class="header__contador" id="abrirCarrito"><span>🛒</span><span
+                                id="contadorItemCarrito">0</span></span></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <main>
+        <section class="carrito">
+            <div class="carrito__hero">
+                <div class="carrito__hero--text">
+                    <h2 class="carrito__h2">Tu carrito</h2>
+                </div>
+            </div>
+            <div class="carrito__container" id="carritoContainer">
+
+            </div>
+        </section>
+        <section class="pagar">
+            <div class="pagar__container" id="pagarContainer">
+                <div class="pagar__subtotal">
+                    <h3 class="pagar__h3">RESUMEN DE COMPRA</h3>
+                    <ul class="pagar__ul" id="subtotal">
+
+                    </ul>
+                    <h3 class="pagar__h3" id="total">TOTAL: $0</h3>
+                </div>
+                <div class="pagar__botones">
+                    <button class="pagar__completado" id="botonPagar">Pagar</button>
+                    <button class="pagar__vaciar" id="botonVaciar">Vaciar carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer__container">

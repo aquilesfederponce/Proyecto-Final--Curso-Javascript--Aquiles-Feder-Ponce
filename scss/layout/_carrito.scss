@@ -1,0 +1,85 @@
+@use "../abstracts/mixins" as*;
+@use "../abstracts/variables" as*;
+@use "sass:map";
+
+
+.carrito {
+    min-height: 200vh;
+    background-color: map.get($colores, "negro");
+    text-align: center;
+    &__hero {
+        background-image: url("../assets/img/Fondo titulo productos.jpg");
+        background-size: cover;
+    }
+
+    &__hero--text {
+        @include flexible(row, nowrap, center, center);
+        text-align: center;
+        backdrop-filter: blur(4px);
+        min-height: 300px;
+    }
+
+    &__h2 {
+        color: rgb(233, 227, 220);
+        @include titulos(balder, 50px);
+    }
+
+    &__container {
+        @include flexible(row, wrap, space-around, center);
+        min-height: 120vh;
+    }
+
+    &__boton--eliminar {
+        width: 175px;
+        height: 25px;
+        background-color: rgb(121, 38, 23);
+        color: map.get($colores, "blanco");
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+    }
+    &__boton--eliminar:hover {
+        background-color: rgb(78, 23, 13);
+        transition: 0.2s ease-in;
+        cursor: pointer;
+    }
+
+    &__modificar{
+        @include flexible(row, wrap, center, center);
+        gap: 5px;
+    }
+
+    &__modificar--sumar{
+        width: 30px;
+        height: 25px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(96, 105, 11);
+        color: map.get($colores, "blanco");
+    }
+
+    &__modificar--span{
+        color: map.get($colores, "cafe_oscuro");
+    }
+
+    &__modificar--restar{
+        width: 30px;
+        height: 25px;
+        background-color: rgb(121, 38, 23);
+        color: map.get($colores, "blanco");
+        border-radius: 5px;
+        border: none;
+    }
+
+    &__modificar--restar:hover{
+        background-color: rgb(78, 23, 13);
+        transition: 0.2s ease-in;
+        cursor: pointer;
+    }
+
+    &__modificar--sumar:hover{
+        background-color: rgb(25, 63, 3);
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+    }
+}

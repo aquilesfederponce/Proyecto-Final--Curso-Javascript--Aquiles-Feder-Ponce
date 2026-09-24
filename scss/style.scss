@@ -4,6 +4,8 @@
 @use "./layout/welcome";
 @use "./layout/productos";
 @use "./layout/footer" ;
+@use "./layout/carrito";
+@use "./layout/transaccion";
 
 *{
     margin: 0;

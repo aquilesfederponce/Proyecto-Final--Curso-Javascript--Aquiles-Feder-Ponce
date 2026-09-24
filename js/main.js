@@ -2,6 +2,7 @@ const productosContainer = document.getElementById("productosContainer");
 const contadorItemsCarrito = document.getElementById("contadorItemCarrito");
 const barraBusqueda = document.getElementById("barraBusqueda");
 
+
 const contadorGuardado = localStorage.getItem("items");
 if (contadorGuardado) {
     contadorItemsCarrito.textContent = JSON.parse(contadorGuardado);
@@ -36,7 +37,7 @@ async function mostrarProductos() {
                 <div class="productos__card--front">
                     <h3 class="productos__h3">${producto.nombre}</h3>
                     <img class="productos__img" src="${producto.imagen}" alt="${producto.textoAlt}">
-                    <p class="productos__p productos__precio">Precio $${producto.precio}</p>
+                    <p class="productos__p productos__precio">Precio $${producto.precio} USD</p>
                     <p class="productos__p">Stock ${producto.stock}</p>
                     <button class= "productos__boton--info">Ver mas info</button>
                     <button class= "productos__boton--agregar">Agregar al carrito</button>
@@ -82,11 +83,11 @@ async function mostrarProductos() {
                         contadorItemsCarrito.textContent = Number(contadorItemsCarrito.textContent) + 1;
                         localStorage.setItem("carrito", JSON.stringify(carrito));
                         localStorage.setItem("items", JSON.stringify(Number(contadorItemsCarrito.textContent)));
+                        Toastify({ text: "+1 Agregado al Carrito", duration: 1300, offset:{y: "80px"},style: { background: "rgb(96, 105, 11)", borderRadius: "17px", boxShadow: "0 3px 8px rgba(0, 0, 0, 0.25)" } }).showToast();
                     } else {
                         cafeEnCarrito.cantidad++;
-                        contadorItemsCarrito.textContent = Number(contadorItemsCarrito.textContent) + 1;
-                        localStorage.setItem("items", JSON.stringify(Number(contadorItemsCarrito.textContent)));
                         localStorage.setItem("carrito", JSON.stringify(carrito));
+                        Toastify({ text: "+1 Agregado al Carrito", duration: 1300, offset:{y: "80px"},style: { background: "rgb(96, 105, 11)", borderRadius: "17px", boxShadow: "0 3px 8px rgba(0, 0, 0, 0.25)" } }).showToast();
                     }
                 }
             })
@@ -97,5 +98,11 @@ async function mostrarProductos() {
     }
 }
 
+
+
+
 mostrarProductos();
+
+
+
 

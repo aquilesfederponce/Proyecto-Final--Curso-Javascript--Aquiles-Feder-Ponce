@@ -1,0 +1,82 @@
+@use "../abstracts/mixins" as*;
+@use "../abstracts/variables" as*;
+@use "sass:map";
+
+.pagar {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 10;
+    pointer-events: none;
+
+    &__container {
+        @include flexible(column, nowrap, space-around, center);
+        gap: 20px;
+        width: 280px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgba(3, 3, 3, 0.8);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    &__container.mostrar {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    &__subtotal {
+        color: map.get($colores, "blanco");
+        @include flexible(column, nowrap, center, flex-start);
+        gap: 8px;
+    }
+
+    &__vaciar {
+        border: none;
+        background-color: rgb(121, 38, 23);
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        color: map.get($colores, "blanco");
+        @include parrafos(400, 13px);
+    }
+
+    &__vaciar:hover {
+        background-color: rgb(78, 23, 13);
+        transition: 0.2s ease-in;
+        cursor: pointer;
+    }
+
+    &__completado {
+        border: none;
+        background-color: rgb(96, 105, 11);
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        color: map.get($colores, "blanco");
+        @include parrafos(400, 13px);
+    }
+
+    &__completado:hover {
+        background-color: rgb(47, 51, 8);
+        transition: 0.2s ease-out;
+        cursor: pointer;
+    }
+
+    &__botones {
+        @include flexible(row, nowrap, space-around, center);
+        gap: 50px;
+    }
+
+    &__ul {
+        @include flexible(column, nowrap, center, flex-start);
+        list-style-type: none;
+        gap: 8px;
+    }
+
+}

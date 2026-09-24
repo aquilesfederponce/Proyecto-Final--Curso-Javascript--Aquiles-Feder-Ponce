@@ -62,6 +62,11 @@ header{
         border-radius: none;
         @include parrafos(400, 20px);
     }
+    &__contador:hover{
+        background-color: rgb(47, 51, 8);
+        transition: 0.2s ease-out;
+        cursor: pointer;
+    }
 }
 
 .header__a:hover{
