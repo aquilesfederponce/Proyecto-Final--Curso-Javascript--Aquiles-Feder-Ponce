@@ -20,13 +20,13 @@
     }
 
     &__h2 {
-        color: rgb(233, 227, 220);
-        @include titulos(balder, 50px);
+        color: rgb(255, 255, 255);
+        @include titulos(700, 70px);
     }
 
     &__container {
         @include flexible(row, wrap, space-around, center);
-        min-height: 120vh;
+        min-height: 150vh;
     }
 
     &__boton--eliminar {

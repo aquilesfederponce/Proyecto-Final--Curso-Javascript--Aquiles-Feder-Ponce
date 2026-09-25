@@ -20,8 +20,8 @@
     }
 
     &__h2 {
-        color: rgb(230, 186, 120);
-        @include titulos(balder, 50px);
+        color: rgb(255, 255, 255);
+        @include titulos(700, 60px);
     }
 
     &__container {
@@ -87,7 +87,8 @@
         transition: 0.2s ease-in-out;
         cursor: pointer;
     }
-    &__precio{
+
+    &__precio {
         color: rgb(233, 213, 190);
         font-weight: 600;
     }
@@ -131,4 +132,19 @@
     @include flexible(column, nowrap, center, center);
     gap: 9px;
     text-align: center;
+}
+
+.mensajeError {
+    text-align: center;
+    @include flexible(column, nowrap, center, center);
+    text-align: center;
+    &__h3 {
+        @include titulos(500, 20px);
+        color: map.get($colores, "blanco");
+    }
+
+    &__p {
+        @include titulos(500, 18px);
+        color: map.get($colores, "blanco");
+    }
 }

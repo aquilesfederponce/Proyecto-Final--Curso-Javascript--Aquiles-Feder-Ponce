@@ -179,10 +179,10 @@ header {
   min-height: 300px;
 }
 .productos__h2 {
-  color: rgb(230, 186, 120);
+  color: rgb(255, 255, 255);
   font-family: "Syne", sans-serif;
-  font-weight: balder;
-  font-size: 50px;
+  font-weight: 700;
+  font-size: 60px;
 }
 .productos__container {
   display: flex;
@@ -303,6 +303,28 @@ header {
   text-align: center;
 }
 
+.mensajeError {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mensajeError__h3 {
+  font-family: "Syne", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #F2EED8;
+}
+.mensajeError__p {
+  font-family: "Syne", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #F2EED8;
+}
+
 .footer {
   min-height: 50vh;
   background-color: #010D00;
@@ -365,10 +387,10 @@ header {
   min-height: 300px;
 }
 .carrito__h2 {
-  color: rgb(233, 227, 220);
+  color: rgb(255, 255, 255);
   font-family: "Syne", sans-serif;
-  font-weight: balder;
-  font-size: 50px;
+  font-weight: 700;
+  font-size: 70px;
 }
 .carrito__container {
   display: flex;
@@ -376,7 +398,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  min-height: 120vh;
+  min-height: 150vh;
 }
 .carrito__boton--eliminar {
   width: 175px;

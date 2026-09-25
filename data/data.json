@@ -4,7 +4,6 @@
         "nombre": "Cafe Tostado Colombia",
         "imagen": "./assets/cafes/Cafe Colombia.png",
         "precio": 4,
-        "stock": 30,
         "descripcion": "Un café de origen colombiano, reconocido por su perfil equilibrado y su aroma intenso. Una opción ideal para quienes disfrutan de un café clásico y aromático.",
         "textoAlt": "Paquete de café tostado molido marca Café Dublin edición Colombia de 250 gramos. El fondo muestra los colores de la bandera colombiana (amarillo, azul y rojo) sobre una ilustración de terrazas de plantaciones de café verdes, con un caficultor tradicional junto a su mula en primer plano."
     },
@@ -13,7 +12,6 @@
         "nombre": "Cafe Tostado Honduras",
         "imagen": "./assets/cafes/Cafe Honduras.png",
         "precio": 2,
-        "stock": 7,
         "textoAlt": "Paquete de café tostado molido marca Café Dublin edición Honduras de 250 gramos. El diseño es de color verde oscuro y destaca una ilustración de dos aves exóticas (guardabarrancos) posadas sobre un antiguo relieve de piedra con iconografía de la cultura maya.",
         "descripcion": "Café de origen hondureño con un perfil suave y agradable. Una variedad perfecta para disfrutar en cualquier momento del día."
     },
@@ -22,7 +20,6 @@
         "nombre": "Cafe Tostado Turquia",
         "imagen": "./assets/cafes/Cafe Turquia.png",
         "precio": 6,
-        "stock": 50,
         "textoAlt": "Paquete de café tostado molido marca Café Dublin edición Turquía de 250 gramos. El fondo es azul intenso y exhibe un arco decorado con intrincados mosaicos de estilo otomano. En el centro se destaca una ilustración de un juego de café tradicional turco dorado, que incluye una cafetera (cezve) y una taza (fincan).",
         "descripcion": "Inspirado en la tradicional cultura cafetera turca, ofrece una experiencia intensa y aromática. Ideal para quienes buscan un café con carácter."
     },
@@ -31,7 +28,6 @@
         "nombre": "Cafe Tostado Perú",
         "imagen": "./assets/cafes/Cafe Peru.png",
         "precio": 3,
-        "stock": 25,
         "textoAlt": "Paquete de café tostado molido marca Café Dublin edición Perú de 260 gramos. El paquete es de color marrón arcilla y muestra una ilustración de una llama con un manto andino tradicional, situada frente a montañas nevadas que representan la cordillera de los Andes.",
         "descripcion" : "Un café peruano de perfil equilibrado y aroma envolvente. Su inspiración andina lo convierte en una variedad especial para disfrutar tranquilamente."
     },
@@ -40,7 +36,6 @@
         "nombre": "Cafe Tostado Italia",
         "imagen": "./assets/cafes/Cafe Italia.png",
         "precio": 5,
-        "stock": 76,
         "textoAlt": "Paquete de café tostado molido marca Café Dublin edición Italia de 250 gramos. El fondo replica las franjas verticales verde, blanca y roja de la bandera italiana, e incorpora una ilustración central de una clásica cafetera moka plateada junto a una rama con aceitunas verdes y negras.",
         "descripcion": "Inspirado en la tradición cafetera italiana, es una opción de carácter intenso y aroma marcado. Perfecto para los amantes de la cultura del espresso."
     },
@@ -49,7 +44,6 @@
         "nombre": "Cafe Tostado Argentina",
         "imagen": "./assets/cafes/Cafe Argentina.png",
         "precio": 2,
-        "stock": 20,
         "textoAlt": "Paquete de café tostado molido marca Café Dublin edición Argentina de 250 gramos. El diseño presenta un fondo celeste y blanco que simula la bandera argentina, adornado con un sol de Mayo dorado en el centro, fileteado porteño en el lateral izquierdo y la silueta del Obelisco de Buenos Aires en la parte inferior.",
         "descripcion" : "Una edición inspirada en la identidad argentina y su tradicional pasión por el café. De perfil agradable y fácil de disfrutar en cualquier ocasión."
     },
@@ -58,7 +52,6 @@
         "nombre": "Cafe Tostado Madagascar",
         "imagen": "./assets/cafes/Cafe Madagascar.png",
         "precio": 7,
-        "stock": 16,
         "textoAlt": "Paquete de café tostado molido marca Café Dublin edición Madagascar de 250 gramos. El diseño tiene un fondo verde selva e ilustra un lémur de cola anillada trepado a un árbol de baobab, rodeado de flores tropicales exóticas como la parpuzano o ave del paraíso.",
         "descripcion" : "Una edición inspirada en los paisajes exóticos de Madagascar. Su propuesta busca transmitir una experiencia diferente y llena de personalidad."
     },
@@ -67,7 +60,6 @@
         "nombre": "Cafe Tostado Kenya",
         "imagen": "./assets/cafes/Cafe Kenya.png",
         "precio": 10,
-        "stock": 40,
         "textoAlt": "Paquete de café tostado molido marca Café Dublin edición Kenya de 250 gramos. Presenta un fondo ocre con una guarda de patrones geométricos tribales africanos en el lateral izquierdo. La ilustración central muestra un paisaje con el monte Kilimanjaro, una acacia y una rama cargada de frutos rojos de café.",
         "descripcion" : "Un café inspirado en los paisajes cafeteros de Kenya, con una identidad intensa y distintiva. Ideal para quienes disfrutan descubrir nuevos perfiles de café."
     }
