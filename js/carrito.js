@@ -207,12 +207,13 @@ barraBusqueda.addEventListener("keydown", ((evento) => {
 })
 );
 
+//EN ESTE EVENT LISTENER TUVE QUE BUSCAR EN GOOGLE COMO HACER PARA QUE AL INGRESAR UN NOMBRE EN LA BARRA DE BUSQUEDA, NO TOME EN CUENTA LOS TILDES. ES POR ESO QUE APARECEN LOS METODOS .normalize Y EL .replace QUE NO DIMOS EN EL CURSO.
 barraBusqueda.addEventListener("input", (evento) => {
-    const textoEnBusqueda = evento.target.value.toLowerCase().normalize("NFD")
+    const textoEnBusqueda = evento.target.value.toLowerCase().trim().normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
 
     const carritoFiltrado = carrito.filter((producto) => {
-        const nombreProducto = producto.nombre.toLowerCase().normalize("NFD")
+        const nombreProducto = producto.nombre.toLowerCase().trim().normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "");
 
         return nombreProducto.includes(textoEnBusqueda);

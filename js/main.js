@@ -115,11 +115,11 @@ async function iniciarApp() {
     mostrarProductos(productos);
 
     barraBusqueda.addEventListener("input", (evento) => {
-        const textoEnBusqueda = evento.target.value.toLowerCase().normalize("NFD")
+        const textoEnBusqueda = evento.target.value.toLowerCase().trim().normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "");
 
         const productosFiltrados = productos.filter((producto) => {
-            const nombreProducto = producto.nombre.toLowerCase().normalize("NFD")
+            const nombreProducto = producto.nombre.toLowerCase().trim().normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "");
 
             return nombreProducto.includes(textoEnBusqueda);
